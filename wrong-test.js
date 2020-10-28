@@ -1,8 +1,8 @@
 window.jQuery = function(selectorOrArray){
     let elements
-    if(typeof selectorOrArray==='string'){//这是判断是否相等，要用全等啊大哥
+    if(typeof selectorOrArray==='string'){//这是判断是否相等，要用全等啊
      elements=document.querySelectorAll(selectorOrArray)
-    }else if(selectorOrArray instanceof Array){
+    }else if(selectorOrArray instanceof Array){//是instanceof,不是instanceOf
            elements=selectorOrArray
       }
     return {
@@ -13,7 +13,7 @@ window.jQuery = function(selectorOrArray){
         return this
       },
       find(selector){
-          let array=[]//定义新变量要记得使用声明啊！大哥
+          let array=[]//定义新变量要记得使用声明啊！
           for(let i=0;i<elements.length;i++){
                 const //elements2=Array.from(document.querySelectorAll(elements[i]))
                 elements2=Array.from(elements[i].querySelectorAll(selector))
